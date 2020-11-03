@@ -1,15 +1,15 @@
-export const posts = (req, res) => {
+export const getPosts = (req, res) => {
   res.send('Posts!');
 };
 
-export const post = (req, res) => {
+export const getPost = (req, res) => {
   res.send('Post!');
 };
 
-export const add = (req, res) => {
+export const addPost = (req, res) => {
   res.send('Add Post!');
 };
 
-export const edit = (req, res) => {
+export const editPost = (req, res) => {
   res.send('Edit Post!');
 };
