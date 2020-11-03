@@ -7,13 +7,13 @@ import postsRoutes from './Routes/posts.js';
 
 const app = express();
 
-//ROUTES
-app.use('/posts', postsRoutes);
-
 //MIDDLEWARES
 app.use(bodyParser.json({ limit: '30mb', extended: true }));
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
+
+//ROUTES
+app.use('/posts', postsRoutes);
 
 //DB and Server
 const MONGO_URL =
