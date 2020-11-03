@@ -3,3 +3,30 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+//Navigation
+.nav {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .logo {
+    img {
+      height: 50px;
+    }
+  }
+
+  .links {
+    a {
+      text-decoration: none;
+      margin-left: 20px;
+    }
+  }
+}
+
+//Main content
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+}

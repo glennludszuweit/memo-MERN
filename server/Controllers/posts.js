@@ -9,11 +9,11 @@ export const getPosts = async (req, res) => {
   }
 };
 
-export const getPost = async (req, res) => {
-  res.send('Post!')
+export const getPost = (req, res) => {
+  res.send('Post!');
 };
 
-export const addPost = (req, res) => {
+export const addPost = async (req, res) => {
   const post = req.body;
   const newPost = new Posts(post);
   try {
