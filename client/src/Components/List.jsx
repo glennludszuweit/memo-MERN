@@ -8,9 +8,11 @@ function List() {
 
   return (
     <div>
-      <h1>Posts</h1>
       {posts.map((post) => (
-        <h2>{post.title}</h2>
+        <div>
+          <h2>{post.title}</h2>
+          <img src={post.image} alt='' />
+        </div>
       ))}
     </div>
   );

@@ -6,11 +6,9 @@ function Nav() {
   return (
     <div className='nav'>
       <div className='logo'>
-        <img src={logo} alt='logo' />
-      </div>
-      <div className='links'>
-        <Link to='/'>Posts</Link>
-        <Link to='/add'>Add</Link>
+        <Link to='/'>
+          <img src={logo} alt='logo' />
+        </Link>
       </div>
     </div>
   );

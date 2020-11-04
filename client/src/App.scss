@@ -8,19 +8,12 @@
 .nav {
   padding: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   .logo {
     img {
       height: 50px;
-    }
-  }
-
-  .links {
-    a {
-      text-decoration: none;
-      margin-left: 20px;
     }
   }
 }

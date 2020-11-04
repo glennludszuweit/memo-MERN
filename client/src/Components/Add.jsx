@@ -7,7 +7,6 @@ function Add() {
   const [postData, setPostData] = useState({
     title: '',
     message: '',
-    tags: '',
     image: '',
   });
   const dispatch = useDispatch();
@@ -39,24 +38,15 @@ function Add() {
             setPostData({ ...postData, message: e.target.value })
           }
         />
-        <input
-          name='tags'
-          type='text'
-          placeholder='tags'
-          value={postData.tags}
-          onChange={(e) => setPostData({ ...postData, tags: e.target.value })}
+        <FileBase
+          type='file'
+          multiple={false}
+          onDone={async ({ base64 }) =>
+            setPostData({ ...postData, image: base64 })
+          }
         />
-        <div name='image' type='file'>
-          <FileBase
-            type='file'
-            multiple={false}
-            onDone={({ base64 }) =>
-              setPostData({ ...postData, selectedFile: base64 })
-            }
-          />
-          <button type='submit'>Submit</button>
-          <button onClick={clear}>Clear</button>
-        </div>
+        <button type='submit'>Submit</button>
+        <button onClick={clear}>Clear</button>
       </form>
     </div>
   );
