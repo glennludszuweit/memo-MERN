@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import FileBase from 'react-file-base64';
 import { useDispatch } from 'react-redux';
-import { addPost } from '../Actions/posts';
+import { addPost } from '../../Redux/Actions/posts';
 
 function Add() {
   const [postData, setPostData] = useState({

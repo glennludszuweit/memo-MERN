@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import postsRoutes from './Routes/posts.js';
+import usersRoutes from './Routes/users.js';
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(cors());
 
 //ROUTES
 app.use('/posts', postsRoutes);
+app.use('/users', usersRoutes);
 
 //DB and Server
 const MONGO_URL =

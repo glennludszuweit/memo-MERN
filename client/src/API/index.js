@@ -1,6 +1,11 @@
 import axios from 'axios';
 
-const URL = 'http://localhost:5000/posts';
+//POSTS
+const POSTS = 'http://localhost:5000/posts';
+export const getPosts = () => axios.get(POSTS);
+export const addPost = (newPost) => axios.post(POSTS, newPost);
 
-export const getPosts = () => axios.get(URL);
-export const addPost = (newPost) => axios.post(URL, newPost);
+//USERS
+const USERS = 'http://localhost:5000/users';
+export const getUsers = () => axios.get(USERS);
+export const addUser = (newUser) => axios.post(USERS, newUser);

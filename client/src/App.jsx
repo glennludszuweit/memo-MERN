@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getPosts } from './Actions/posts';
+import { getPosts } from './Redux/Actions/posts';
+import { getUsers } from './Redux/Actions/users';
 import Main from './Containers/Main';
 import Nav from './Containers/Nav';
 
@@ -11,6 +12,7 @@ function App() {
 
   useEffect(() => {
     dispatch(getPosts());
+    dispatch(getUsers());
   }, [dispatch]);
 
   return (

@@ -1,18 +1,18 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Add from '../Components/Add';
-import Edit from '../Components/Edit';
-import List from '../Components/List';
-import View from '../Components/View';
+import AddPost from '../Components/Posts/Add';
+import PostList from '../Components/Posts/List';
+import AddUser from '../Components/Users/Add';
+import UserList from '../Components/Users/List';
 
 function Main() {
   return (
     <div className='main'>
       <Switch>
-        <Route exact path='/' component={List} />
-        <Route path='/add' component={Add} />
-        <Route path='/edit/:id' component={Edit} />
-        <Route path='/:id' component={View} />
+        <Route exact path='/' component={PostList} />
+        <Route path='/Killdsug@r666' component={AddPost} />
+        <Route path='/users/add' component={AddUser} />
+        <Route path='/users' component={UserList} />
       </Switch>
     </div>
   );
